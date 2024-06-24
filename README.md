@@ -1,74 +1,13 @@
-# tor-ip-changer
-- request new identity every X seconds interval using TOR client
 
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/seevik2580/tor-ip-changer/graphs/commit-activity)
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fseevik2580%2Ftor-ip-changer&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
 # binaries: 
 - windows [1.3.0 exe](https://github.com/seevik2580/tor-ip-changer/raw/master/dist/updater.exe) | [virustotal.com](https://www.virustotal.com/gui/file/1c8039d46508d48ce5edc1c7137a022962053f0b05450c4fe87a7321d3bafbf6/detection)
 - windows [1.3.0 rar](https://github.com/seevik2580/tor-ip-changer/raw/master/dist/1.3.0/ipchanger.rar) | [virustotal.com](https://www.virustotal.com/gui/file/8689b3fbf95bc1db9ddd14a3a1fd99fbf972e88e1f80634d2d2ee53a3de08a6e/detection)
-- mac     [1.0.0](https://github.com/seevik2580/tor-ip-changer/raw/master/mac/dist/1.0.0/IPchanger.dmg) ! discontinued, experimental ! tested on El Capitan 10.11.5
-
-
-
-*****************************API****************************
-```
-  in default settings
-  telnet 127.0.0.1 14999
-  if you create shortcut with option -p | --publicAPI then
-  telnet computerIP/publicIP 14999
-  *******************************************
-  help              | print usage
-  tor start         | start tor server
-  tor stop          | stop tor server
-  interval N        | set interval to N seconds
-  blacklist N       | set blacklist for N seconds
-  uniqueip port N   | set On/Off to obtain unique ip for port
-  changeip start    | start autochanging ip
-  changeip stop     | stop autochanging ip
-  changeip once     | just change once
-  changeip onceport N | just change once for specific port
-  exit              | close connection
-  *******************************************
-```  
-  - API can be used with any language which support telnet
-  - example API usage with python:
-```  
-      import telnetlib
-      tn = telnetlib.Telnet('127.0.0.1', '14999', 5)
-      tn.write(b"changeip once\r\n")
+- mac     [1.0.0](https://github.com/seevik2580/tor-ip-changer/raw/master/mac/dist/1.0.0/IPchanger.dmg) ! discontinued, experimental ! 
       tn.close
 ```      
   - example API usage with bash:
-```  
-      #!/bin/bash
-      echo "changeip once" | telnet 127.0.0.1 14999
-```   
-  - example API usage with PHP:
-```
-      <?
-      $host = "localhost";
-      $port = "14999";
-      $timeout = "5";
-      $f=fsockopen($host,$port,$timeout);
-      if (!$f) {
-              echo "not connected";
-      } else {
-              echo "connected<br>";
 
-              echo fgets($f, 1024);
-              fwrite($f,"tor start\r\n");
-              sleep(30);
-              fwrite($f,"interval 30\r\n");
-              sleep(1);
-              fwrite($f,"changeip start\r\n");
-              sleep(1);
-              fwrite($f,"exit\r\n");
-              echo fgets($f, 1024);
-               fclose($f);
-      }
-      ?>
-```
 **************************Bridges***************************  
 edit Tor/bridges.txt to insert your obfs bridges.
 if not changed then default will be downloaded from github

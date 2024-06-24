@@ -1,5 +1,5 @@
 ************************************************************
-Changelog: v1.2.2
+Changelog: v3.2.2
 ************************************************************
 Added:   
    API - you can now telnet to port 14999 and use ipchanger 
@@ -30,5 +30,5 @@ Changed:
 ************************************************************
 Thanks:
    sponsor Altnet s.r.o. ISP provider in Czech republic
-   Skvely.net®, banner will be visible until 01/11/2019
+   Skvely.net®, banner will be visible until 20/06/2024
 ************************************************************

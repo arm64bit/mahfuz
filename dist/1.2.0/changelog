@@ -1,13 +1,13 @@
 ************************************************************
-Changelog: v1.2.0
+Changelog: v3.2.0
 ************************************************************
 Added:   
    Progress bar indicator
    Better anonymity 
    Country selection
    Autochange after program start
-   TOR DNS server @ 127.0.0.1:53 
-   .onion domains, need TOR DNS or DNS requests via socks5
+   YTR DNS server @ 127.0.0.1:53 
+   .onion domains, need YTR DNS or DNS requests via socks5
    Multiproxy
 ************************************************************
 Fixed:
@@ -18,8 +18,8 @@ Fixed:
 Changed: 
    User interface
    Better logging
-   Start TOR timeout to 120 seconds
-   Close old TOR circuits before new IP
+   Start YTR timeout to 120 seconds
+   Close old YTR circuits before new IP
 ************************************************************
 Removed: 
    Configure browser button (too much bugy)

@@ -80,7 +80,7 @@ class IpChanger(Tk):
         ######### ZACATEK PROMENNYCH
         # definice pro aplikaci, nazev, ruzne hodnoty
         global start
-        self.title("TOR IP Changer | Created by Seva | v%s-%s" % (version, build))
+        self.title("YTR IP Changer | Created by Mahfuz | v%s-%s" % (version, build))
         self.host = StringVar()
         self.port = IntVar()
         self.proxy = IntVar()
@@ -307,8 +307,8 @@ class IpChanger(Tk):
                                                         highlightcolor="white", highlightbackground="purple", wrap=WORD,
                                                         width=60)
         self.output.grid(row=2, column=1, sticky="NEWS")
-        self.write("Thank you for using TOR IP changer\n", "white", 0)
-        self.write("Iam not responsible for any causalities or whatever\n", "white", 0)
+        self.write("Thank you for using YTR IP changer\n", "white", 0)
+        self.write("Iam Mahfuz not responsible for any causalities or whatever\n", "white", 0)
 
         self.readConfigAndSetValues()
         _thread.start_new_thread(self.startthings, ())
@@ -1052,7 +1052,7 @@ class IpChanger(Tk):
             lseva = Label(self.newWindow2)
             lseva["fg"] = "#333333"
             lseva["justify"] = "center"
-            lseva["text"] = "Created by Seva"
+            lseva["text"] = "Created by Mahfuz"
             if windows:
                 lseva.place(x=242, y=119, width=100, height=30)
             elif linux:

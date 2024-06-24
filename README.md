@@ -4,86 +4,12 @@
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/seevik2580/tor-ip-changer/graphs/commit-activity)
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fseevik2580%2Ftor-ip-changer&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
-##### TOR IP Changer does not override router ip, it just create proxy which is connected inside TOR network which you can use to hide your real ip address for browser or apps that supports socks4/5 type proxy, and you can change that IP inside TOR network every X seconds. For most cases its just for browsers, but you can use third party software to co-operate with TOR IPchanger to anonymize not just browsers but also other apps which does not have support for socks4/5 type proxy or even whole computer with software like [Proxifier](https://www.proxifier.com/).
-
-## i will take no responsibility !!! it is for educational purposes only
-
-## Donation
-- If you find this project interesting, you can send some Bitcoins to address: `1DkStuanmQLC9Xv4UgxbHRzhHqDwABkLfi`
-
 # binaries: 
 - windows [1.3.0 exe](https://github.com/seevik2580/tor-ip-changer/raw/master/dist/updater.exe) | [virustotal.com](https://www.virustotal.com/gui/file/1c8039d46508d48ce5edc1c7137a022962053f0b05450c4fe87a7321d3bafbf6/detection)
 - windows [1.3.0 rar](https://github.com/seevik2580/tor-ip-changer/raw/master/dist/1.3.0/ipchanger.rar) | [virustotal.com](https://www.virustotal.com/gui/file/8689b3fbf95bc1db9ddd14a3a1fd99fbf972e88e1f80634d2d2ee53a3de08a6e/detection)
 - mac     [1.0.0](https://github.com/seevik2580/tor-ip-changer/raw/master/mac/dist/1.0.0/IPchanger.dmg) ! discontinued, experimental ! tested on El Capitan 10.11.5
 
-# source code:
-- windows / linux   [1.3.0](https://github.com/seevik2580/tor-ip-changer/tree/master/source-code)
-- mac     [1.0.0](https://github.com/seevik2580/tor-ip-changer/tree/master/source-code-mac)
 
-# Docker
-- windows / linux   [1.3.0](https://github.com/seevik2580/tor-ip-changer/blob/master/Dockerfile)
-- [hub.docker.com](https://hub.docker.com/r/seevik2580/tor-ip-changer)
-- run `xhost +` before starting container
-- `docker run -p 14999:14999 -p 9050:9050 -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix seevik2580/tor-ip-changer`
-
-# Docker-compose:
-- windows / linux   [1.3.0](https://github.com/seevik2580/tor-ip-changer/tree/master/docker-compose.yml)
-- run `xhost +` before starting container
-- `docker-compose up -d`
-
-# example of usage:
-
-![](screenshots/1.3.0-1.png)
-
-![](screenshots/1.3.0-2.png)
-
-![](screenshots/1.3.0-3.png)
-
-```
-   1. click TOR server > Start
-   2(optional) Options > Settings
-   3. set your proxy inside browser or app to SOCKS4/5 127.0.0.1:9050 
-      or list generated after start (only if multiproxy) 
-   4. click IP Changer > Start
-   5. go to http://checkip.amazonaws.com/ or http://showip.net/ or whenever it shows you IP, and after next period (default 10 seconds) refresh page and if it works, you will always see different IP
-
-```
-
-![](screenshots/5.png)
-   
-# *************************shortcuts**************************
-```
-usage: ipchanger.exe [-a AUTO] [-d] [-m 1-100] [-p] [-c COUNTRY] [-b] [-n] [-u]
-    '-a n' automaticaly change ip after start every n
-            example:   ipchanger.exe -a 35
-                        change ip auto every 35 sec
-
-    '-m n' start multiple proxy n instances
-            example:   ipchanger.exe -m 5
-                        start proxy 5 times
-                        with different ports
-                        and generate list
-
-    '-d' open debug console live log
-
-    '-c COUNTRYCODE' select specific country
-    
-    '-p' bind API to public IP
-
-    '-b' use bridges by default
-
-    '-n' disable check for updates
-
-    '-u' always obtain unique ip
-
-    '-g | --nogui' run without GUI, control through API
-            to run in background use `nohup ipchanger -g &`
-            for linux version
-```
-
-![](screenshots/1.3.0-4.png)
-
-![](screenshots/1.3.0-5.png)
 
 *****************************API****************************
 ```

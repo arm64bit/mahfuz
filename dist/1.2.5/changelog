@@ -1,5 +1,5 @@
 ************************************************************
-Changelog: v1.2.5
+Changelog: v3.2.5
 ************************************************************
 Added:
     + new method to verify if tor started ok by telnet

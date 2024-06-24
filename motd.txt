@@ -1,10 +1,10 @@
 ************************************************************
 
-IPchanger last update 26.10.2021
+IPchanger last update 20.06.2024
 
 ************************************************************
 
-Message of the day: project open-sourced :)
-Repo url: https://github.com/seevik2580/tor-ip-changer
+Message of the day: project is privet-only :)
+Repo url: https://www.facebook.com/anonymousproo1
 
 ************************************************************
